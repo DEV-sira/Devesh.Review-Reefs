@@ -1,0 +1,381 @@
+/* Author: Devesh Siriwardene
+Date: 16 10 2023
+Version:
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/*
+GLOBAL STYLES
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+
+
+body {
+    background-color: #11111f;
+    color: aliceblue;
+    text-align: justify;
+}
+
+/*
+HEADER
+--------------------------------------------------------------------------------
+*/
+
+header {
+    display: flex;
+    background-color: #11111f;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.logo img {
+    height: 300px;
+}
+
+/*
+NAVIGATION
+--------------------------------------------------------------------------------
+*/
+
+.navbar-list {
+    display: flex;
+    width: 100%;
+    background-color: #73c8dd;
+}
+
+.navbar-list ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 1% 0;
+    background-color: #11111f;
+    justify-content: space-around;
+}
+
+.navbar-list ul li {
+    flex: 1; 
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.navbar-list ul a {
+    color: aliceblue;
+    font-size: 22px; 
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.1s ease;
+    display: block;
+    padding: 21px 0;
+}
+
+.navbar-list ul li:hover {
+    background-color: #317b8e; 
+}
+
+/* Dropdown Styling */
+
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #86c4cb;
+    width: 100%; 
+    z-index: 1;
+    top: 100%; /
+    left: 0; /
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    text-align: center; 
+}
+
+/* Highlight dropdown items on hover */
+
+.dropdown-content a:hover {
+    background-color: #317b8e;
+    color: #fff;
+}
+
+/*
+INDEX PAGE
+-----------------------------------------------------------===============================--------
+-----------------------------------------------------------===============================--------
+*/
+
+/*
+SITE BANNER IMAGE------------------------------------------------------------------------------
+*/
+
+main {
+    background-image: url(Images/BGimage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#banner-image {
+    width: 100%;
+}
+
+#banner-image img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+/*
+BUTTON SECTION FOR MORE CONTENT----------------------------------------------------------------------
+*/
+
+.button-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 1% 20%;
+}
+
+.button {
+    padding: 3%;
+    background-color: #376a95;
+    font-size: 1.2em;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.4s ease;
+}
+
+/*
+ARTICLE-----------------------------------------------------------------------------
+*/
+
+
+#index-article {
+    background-color: rgba(8, 20, 43, 0.67);
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#index-article h1 {
+    text-align: center;
+    font-size: 2.1em;
+}
+#index-article h2 {
+    text-align: center;
+}
+
+#index-article-section-1 {
+    order: -1;
+    border-top: solid;
+    width: 100%;
+}
+#index-article-section-2 {
+    order: 1;
+    margin-top: 34px;
+    border-top: solid;
+    border-bottom: solid;
+    width: 100%;
+}
+
+#index-article-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(2, 11, 27, 0.52);
+    padding: 21px 0px;
+}
+#index-article-img img {
+    max-width: 75%;
+    flex: 1 0 0;
+    height: auto;
+}
+
+/*
+SIDEBAR ------------------------------------------------------------------------------
+*/
+
+
+sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.sidebar-content-card {
+    display: flex;
+    width: 35%;
+    margin: 1%;
+    border: solid;
+    background-color: rgba(31, 42, 62, 0.89);
+}
+
+.sidebar-content-card a {
+    padding: 5% 10%;
+    font-size: 1.8em;
+    height: 340px;
+    text-decoration: none;
+    color: white;
+    column-gap: ;
+}
+
+.sidebar-content-card a div {
+    margin-top: 18%;
+}
+
+
+/*FOOTER ------------------------------------------------------------------------------
+*/
+
+footer {
+    background-color: #11111f;
+}
+
+.footer-columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3% 8%;
+    flex-wrap: wrap;
+}
+
+.footer-columns > * {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-columns img {
+    width: 50%;
+}
+
+
+/*
+VIEWPORT CHANGE FOR MEDIUM SIZED MOBILE SCREENS ------------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    #index-article-section-1 {
+        order: -1;
+        border-top: solid;
+        width: 47%;
+    }
+
+    #index-article-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: rgba(2, 11, 27, 0.52);
+        padding: 21px 0px;
+    }
+    .sidebar-content-card {
+        display: flex;
+        width: 25%;
+        margin: 5% 0%;
+        border: solid;
+        background-color: rgba(31, 42, 62, 0.89);
+    }
+
+    #index-article-img img {
+        max-width: 92%;
+        flex: 1 0 0;
+        height: auto;
+    }
+
+    .footer-columns > * {
+        width: 25%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/*
+VIEWPORT CHANGE FOR LARGE SCREENS ------------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 1280px) {
+    #index-article-section-1 {
+        order: -1;
+        border-top: solid;
+        width: 47%;
+    }
+
+    #index-article-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: rgba(2, 11, 27, 0.52);
+        padding: 21px 0px;
+    }
+    .sidebar-content-card {
+        display: flex;
+        width: 25%;
+        margin: 5% 0%;
+        border: solid;
+        background-color: rgba(31, 42, 62, 0.89);
+    }
+
+    #index-article-img img {
+        max-width: 92%;
+        flex: 1 0 0;
+        height: auto;
+    }
+
+    .footer-columns > * {
+        width: 25%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header {
+        display: flex;
+        background-color: #11111f;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%; 
+      
+    }
+
+    .logo {
+        width: 25%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .logo img {
+        height: 300px;
+        border: solid;
+        border-radius: 50%;
+        border-color: #73c8dd;
+        border-width: 11px;
+    }
+
+    #header-navbar {
+        width: 74%;
+        justify-content: right;
+        display: flex;
+        background-color: #73c8dd;
+    }
+
+}
